@@ -156,6 +156,12 @@
     right: 1rem;
     cursor: pointer;
   }
+  .home_content{
+    padding-left: 6rem;
+  }
+  #change{
+    padding-left: 4rem;
+  }
   }
   /*============*/
   .show-menu{
@@ -174,6 +180,9 @@
     display: grid;
     place-items: center;
   }
+  .home_content{
+    margin-top: -3rem;
+  }
   .home_content h2{
     color: black;
   }
@@ -182,7 +191,7 @@
   }
   #change{
     font-size: 1.9rem;
-    color: black;
+    color: var(--title-color);
   }
   @media screen and (min-width: 767px) {
     .section{
@@ -223,4 +232,7 @@
   #home_i1,#home_i2{
       padding-left: 1rem;
     } 
+    #change{
+      margin-top: -7px;
+    }
 }  
