@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+/*VARIABLES CSS */
+:root {
+  --header-height: 3.5rem;
+ 
+  --first-color: #7b75c8;
+  --title-color: #da6056 ;
+  --text-color: hsl(219, 8%, 75%);
+  --text-color-light: hsl(219, 4%, 55%);
+  --white-color: #fff;
+  --body-color: #f2dbe6;
+  
+
+ --body-font: 'Exo', sans-serif;
+ --h1-font-size: 1.5rem;
+ --h2-font-size: 1.25rem;
+ --h3-font-size: 1rem;
+ --normal-font-size: .938rem;
+ --small-font-size: .813rem;
+ --smaller-font-size: .75rem;
+
+  --font-medium: 500;
+  --font-semi-bold:600;
+
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+@media screen and (min-width: 968px) {
+    :root {
+      --h1-font-size: 2.25rem;
+      --h2-font-size: 1.5rem;
+      --h3-font-size: 1.25rem;
+      --normal-font-size: 1rem;
+      --small-font-size: .875rem;
+      --smaller-font-size: .813rem;
+    }
+  }
+  
+  
+  *{
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+  }
+  html{
+      scroll-behavior: smooth;
+  }
+  body {
+      font-family: var(--body-font);
+      font-size: var(--normal-font-size);
+      background-color: var(--body-color);
+      color: var(--text-color);
+    }
+    h1, h2, h3, {
+      color: var(--title-color);
+      font-weight: var(--font-medium);
+    }
+    ul{
+        list-style: none;
+    }
+    a{
+        text-decoration: none;
+    }
+    img{
+        max-width: 100%;
+        height: auto;
+    }
+    .container {
+      max-width: 100%;
+      margin-left: 1.5rem;
+      margin-right: 1.5rem;
+    }
+  .grid{
+      display: grid;
+      gap: 1.5rem;
+  }
+  .section{
+      padding: 4.5rem 0 2rem;
+  }
+  .section__title{
+    font-size: var(--h2-font-size);
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+  .header{
+    width: 100%;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+  }
+  .nav{
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav__logo,
+  .nav__toggle{
+    color: var(--title-color);
+    display: inline-flex;
+  }
+  .nav__logo{
+    align-items: center;
+    column-gap: .25rem;
+    font-weight: var(--font-medium);
+    transition: .3s;
+  }
+  .nav__logo i{
+    font-size: 1.25rem;
+  }
+  .nav__logo:hover{
+    color: var(--first-color);
+  }
+  .nav__toggle{
+    cursor: pointer;
+    font-size: 1.25rem;
+  }
+  
+  @media screen and (max-width: 767px){
+       .nav__menu{
+         position: fixed;
+         background-color: var(--body-color);
+         top: 0;
+         right: -100%;
+         width: 100%;
+         height: 100%;
+         backdrop-filter: blur(15px);
+         transition: .3s;
+       }
+  
+    
+  .nav__list{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    row-gap: 3rem;
+    padding-top: 9rem
+  }
+  .nav__link{
+    text-transform: uppercase;
+    color: var(--title-color);
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-medium);
+    transition: .3s;
+  }
+  .nav__link:hover{
+    color: var(--first-color);
+  }
+  .nav__close{
+    font-size: 2rem;
+    color: var(--white-color);
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+  }
+  }
+  /*============*/
+  .show-menu{
+    right: 0;
+  }
+  .scroll-header{
+    border-radius: 0 0 .5rem .4rem;
+    background-color: var(--body-color);
+    box-shadow: 0 2px 4px hsla(0, 0%, 1%, 1);
+    height: 3.5rem;
+    transition: 1s;
+    animation-delay: .6s;
+  }
+  .home_container{
+    padding-top: 3rem;
+    display: grid;
+    place-items: center;
+  }
+  .home_content h2{
+    color: black;
+  }
+  #home_i2{
+    display: none;
+  }
+  @media screen and (min-width: 767px) {
+    .section{
+      padding: 7rem 0 2rem;
+    }
+    .nav{
+      height: auto;
+      margin-top: 10px;
+      padding-right: 5rem;
+    }
+    .nav__logo{
+      margin-left: 40px;
+    }
+    .nav__toggle,
+    .nav__close{
+      display: none;
+    }
+    .nav__list{
+      display: flex;
+      flex-direction: row;
+      column-gap: 3rem;
+      padding-top: 1rem;
+     
+    }
+    .nav__link{
+      text-transform: uppercase;
+      color: var(--title-color);
+      font-weight: var(--font-medium);
+      transition: .3s;
+    }
+    .nav__link:hover{
+      color: var(--first-color);
+    }
+    .home_content{
+      padding-left: 8rem;
+    }
+  #home_i1,#home_i2{
+      padding-left: 1rem;
+    } 
+}  

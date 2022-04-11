@@ -1,0 +1,109 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/10715cfae1.js" crossorigin="anonymous"></script>        <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+        <link rel="stylesheet"  href="style.css">
+        <title>MUJI-C | YOUR MUSICAL TASTE</title>
+        <link rel="icon" href="/img/brand.png">
+        
+    </head>
+    <body>
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="" class="nav__logo">
+                    <i class="fa-solid fa-compact-disc"></i>    
+                      MUJI-C
+                </a>
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__items">
+                            <a href="#home" class="nav__link">Home</a>
+                        </li>
+                        <li class="nav__items">
+                            <a href="#about" class="nav__link">About</a>
+                        </li>
+                        <li class="nav__items">
+                            <a href="#" class="nav__link">Popular</a>
+                        </li>
+                        <li class="nav__items">
+                            <a href="#" class="nav__link">Featured</a>
+                        </li>
+                    </ul>
+                    <div class="nav__close" id="nav-close">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                </div>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </nav>
+        </header>   
+
+
+      <div class="main">
+
+        <section class="home" id="home">
+            <div class="home_container">
+                <div class="home_group">
+                    <div class="home_img">
+                        <img src="img/home_img-1.png" alt="">
+                    </div>
+                    <div class="home_content">
+                        <h2>Click Here to Play 
+                             <i class="fa-solid fa-circle-play" id="home_i1" onclick="play1()"></i> 
+                             <i class="fa-solid fa-circle-stop" id="home_i2" onclick="play2()"></i>
+                            </h2> 
+                    </div>
+                </div>
+            </div>
+        </section>
+
+      </div>
+
+        
+
+        </body>
+
+
+        <script>
+            const navMenu = document.getElementById('nav-menu'),
+      navToggle = document.getElementById('nav-toggle'),
+      navClose = document.getElementById('nav-close')
+
+
+if(navToggle){
+    navToggle.addEventListener('click', () =>{
+        navMenu.classList.add('show-menu')
+    })
+}
+
+
+if(navClose){
+    navClose.addEventListener('click', () =>{
+        navMenu.classList.remove('show-menu')
+    })
+}
+
+const navLink = document.querySelectorAll('.nav__link')
+
+function scrollHeader(){
+    const header = document.getElementById('header')
+    if(this.scrollY >= 50) header.classList.add('scroll-header'); else header.classList.remove('scroll-header')
+}
+window.addEventListener('scroll', scrollHeader)
+
+function play1(){
+        document.getElementById('home_i2').style.display = "block";
+        document.getElementById('home_i1').style.display = "none";
+}
+function play2(){
+        document.getElementById('home_i1').style.display = "block";
+        document.getElementById('home_i2').style.display = "none";
+}
+
+
+        </script>
+
+        </html>
