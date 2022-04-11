@@ -51,10 +51,10 @@
                         <img src="img/home_img-1.png" alt="">
                     </div>
                     <div class="home_content">
-                        <h2>Click Here to Play 
-                             <i class="fa-solid fa-circle-play" id="home_i1" onclick="play1()"></i> 
-                             <i class="fa-solid fa-circle-stop" id="home_i2" onclick="play2()"></i>
-                            </h2> 
+                        <h2>Click Here to Play</h2>
+                        <span id="change"> 
+                            <i class="fa-solid fa-circle-play" id="home_i1" onclick="play1()"></i> 
+                        </span>
                     </div>
                 </div>
             </div>
@@ -94,16 +94,12 @@ function scrollHeader(){
 }
 window.addEventListener('scroll', scrollHeader)
 
-function play1(){
-        document.getElementById('home_i2').style.display = "block";
-        document.getElementById('home_i1').style.display = "none";
-}
-function play2(){
-        document.getElementById('home_i1').style.display = "block";
-        document.getElementById('home_i2').style.display = "none";
-}
-
-
+ function play1() {
+     document.getElementById('change').innerHTML = '<i class="fa-solid fa-circle-stop" id="home_i1" onclick = "play2()"></i>';
+ }
+ function play2() {
+     document.getElementById('change').innerHTML = '<i class="fa-solid fa-circle-play" id="home_i1" onclick="play1()"></i>';
+ }
         </script>
 
         </html>

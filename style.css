@@ -51,7 +51,7 @@
       background-color: var(--body-color);
       color: var(--text-color);
     }
-    h1, h2, h3, {
+    h1, h2, h3 {
       color: var(--title-color);
       font-weight: var(--font-medium);
     }
@@ -180,6 +180,10 @@
   #home_i2{
     display: none;
   }
+  #change{
+    font-size: 1.9rem;
+    color: black;
+  }
   @media screen and (min-width: 767px) {
     .section{
       padding: 7rem 0 2rem;
@@ -214,6 +218,7 @@
     }
     .home_content{
       padding-left: 8rem;
+      display: flex;
     }
   #home_i1,#home_i2{
       padding-left: 1rem;
