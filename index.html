@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
         <link rel="stylesheet"  href="style.css">
         <title>MUJI-C | YOUR MUSICAL TASTE</title>
-        <link rel="icon" href="/img/brand.png">
+        <link rel="icon" href="/img/home_img-1.png">
         
     </head>
     <body>
@@ -53,7 +53,7 @@
                     <div class="home_content">
                         <h2>Click Here to Play</h2>
                         <span id="change"> 
-                            <i class="fa-solid fa-circle-play" id="home_i1" onclick="play1()"></i> 
+                            <i class="fa-solid fa-circle-play" id="home_i1" onclick="play1(); audio1.play();"></i> 
                         </span>
                     </div>
                 </div>
@@ -95,11 +95,13 @@ function scrollHeader(){
 window.addEventListener('scroll', scrollHeader)
 
  function play1() {
-     document.getElementById('change').innerHTML = '<i class="fa-solid fa-circle-stop" id="home_i1" onclick = "play2()"></i>';
+     document.getElementById('change').innerHTML = '<i class="fa-solid fa-circle-pause" id="home_i1" onclick = "play2(); audio1.pause();"></i>';
  }
  function play2() {
-     document.getElementById('change').innerHTML = '<i class="fa-solid fa-circle-play" id="home_i1" onclick="play1()"></i>';
+     document.getElementById('change').innerHTML = '<i class="fa-solid fa-circle-play" id="home_i1" onclick="play1(); audio1.play();"></i>';
  }
+ const audio1 = new Audio();
+audio1.src = "mp3/kedarnath.mp3";
         </script>
 
         </html>
