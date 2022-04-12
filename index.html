@@ -2,11 +2,12 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://kit.fontawesome.com/10715cfae1.js" crossorigin="anonymous"></script>        <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+        <script src="https://kit.fontawesome.com/10715cfae1.js" crossorigin="anonymous"></script>      
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
         <link rel="stylesheet"  href="style.css">
         <title>MUJI-C | YOUR MUSICAL TASTE</title>
-        <link rel="icon" href="/img/icon.png">
+        <link rel="icon" href="/img/home_img-1.png">
         
     </head>
     <body>
@@ -19,16 +20,24 @@
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
                         <li class="nav__items">
-                            <a href="#home" class="nav__link">Home</a>
+                            <a href="#home" class="nav__link">
+                                <i class="ri-home-8-line"></i>
+                                Home</a>
                         </li>
                         <li class="nav__items">
-                            <a href="#about" class="nav__link">About</a>
+                            <a href="#artist" class="nav__link">
+                                <i class="fa-solid fa-headset"></i>
+                                Artists</a>
                         </li>
                         <li class="nav__items">
-                            <a href="#" class="nav__link">Popular</a>
+                            <a href="#" class="nav__link">
+                                <i class="ri-music-line"></i>
+                                Songs</a>
                         </li>
                         <li class="nav__items">
-                            <a href="#" class="nav__link">Featured</a>
+                            <a href="#" class="nav__link">
+                                <i class="ri-play-list-line"></i>
+                                Playlist</a>
                         </li>
                     </ul>
                     <div class="nav__close" id="nav-close">
@@ -46,6 +55,10 @@
 
         <section class="home" id="home">
             <div class="home_container">
+                <div class="home_data">
+                    <h1> Your Musical Taste</h1>
+                    <p>Streaming over 10k Devices</p>
+                </div>
                 <div class="home_group">
                     <div class="home_img">
                         <img src="img/home_img-1.png" alt="">
@@ -60,40 +73,76 @@
             </div>
         </section>
 
+
+        <section class="artists" id="artist">
+            <div class="artist_container">
+                <div class="artist_title">
+                    Popular Artists  <i class="fa-solid fa-caret-right"></i>
+                </div>
+               <div class="artist_data">
+                <div class="artist_card">
+                    <img src="img/artist1.jpg" alt="" class="artist_img">
+                </div>
+                <div class="artist_card">
+                    <img src="img/artist2.jpg" alt="" class="artist_img">
+                </div>
+                <div class="artist_card">
+                    <img src="img/artist4.jpg" alt="" class="artist_img">
+                </div>
+               </div>
+            </div>
+        </section>
+
+        <section class="songs" id="songs">
+            <div class="songs_container">
+                <div class="songs_title">
+                    <div class="artist_title">
+                        Popular This Week  <i class="fa-solid fa-caret-right"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
       </div>
 
-        
+
 
         </body>
 
 
         <script>
-            const navMenu = document.getElementById('nav-menu'),
+
+/*_____navbar_____*/
+
+     const navMenu = document.getElementById('nav-menu'),
       navToggle = document.getElementById('nav-toggle'),
       navClose = document.getElementById('nav-close')
 
 
-if(navToggle){
+       if(navToggle){
     navToggle.addEventListener('click', () =>{
         navMenu.classList.add('show-menu')
-    })
-}
+      })
+    }
 
 
-if(navClose){
+       if(navClose){
     navClose.addEventListener('click', () =>{
         navMenu.classList.remove('show-menu')
-    })
-}
+      })
+    }
 
-const navLink = document.querySelectorAll('.nav__link')
+       const navLink = document.querySelectorAll('.nav__link')
 
-function scrollHeader(){
+     function scrollHeader(){
     const header = document.getElementById('header')
     if(this.scrollY >= 50) header.classList.add('scroll-header'); else header.classList.remove('scroll-header')
-}
-window.addEventListener('scroll', scrollHeader)
+    }
+     window.addEventListener('scroll', scrollHeader)
 
+
+/*_____play song in home page_____*/
+   
  function play1() {
      document.getElementById('change').innerHTML = '<i class="fa-solid fa-circle-pause" id="home_i1" onclick = "play2(); audio1.pause();"></i>';
  }
@@ -101,7 +150,10 @@ window.addEventListener('scroll', scrollHeader)
      document.getElementById('change').innerHTML = '<i class="fa-solid fa-circle-play" id="home_i1" onclick="play1(); audio1.play();"></i>';
  }
  const audio1 = new Audio();
-audio1.src = "mp3/kedarnath.mp3";
-        </script>
+   audio1.src = "mp3/loverboy.mp3";
+
+
+
+</script>
 
         </html>
