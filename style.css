@@ -211,6 +211,7 @@
   }
   .home_content{
     margin-top: -3rem;
+    align-items: center;
   }
   .home_content h2{
     color: black;
@@ -221,6 +222,7 @@
   #change{
     font-size: 1.9rem;
     color: var(--title-color);
+    transform: translateY(12%);
   }
   .home_data{
     display: grid;
@@ -258,6 +260,8 @@
     box-shadow: 0 2px 4px hsla(0, 0%, 1%, 1);
     cursor: pointer;
     object-fit: cover;
+    width: 18rem;
+    height: 18rem;
   }
   .artist_img:hover{
     box-shadow: 0 10px 10px 3px hsla(0, 0%, 1%, 1);
